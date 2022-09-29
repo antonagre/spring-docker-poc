@@ -24,9 +24,9 @@ jobs:
         cache: maven
     - name: Build with Maven
       run: mvn spring-boot:build-image
-    - name: Publish Docker Image to GitHub Registry
-      uses: TilBlechschmidt/gp-docker-action@v0.2-alpha
+    - name: Github Container Registry: Build and push Docker image
+      uses: pmorelli92/github-container-registry-build-push@2.0.0
       with:
-        github-token: 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
-        image-name: docker.repo/test:1.0.0
-        image-tag: 1.0.0
+        github-push-secret: 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
+        docker-image-name: docker.repo/test:1.0.0
+
