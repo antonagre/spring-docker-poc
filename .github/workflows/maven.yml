@@ -24,9 +24,10 @@ jobs:
         cache: maven
     - name: Build with Maven
       run: mvn spring-boot:build-image
-    - name: Github Container Registry -- push Docker image
-      uses: pmorelli92/github-container-registry-build-push@2.0.0
+    - name: Build with --build-arg(s)
+      uses: VaultVulp/gp-docker-action@1.2.0
       with:
-        github-push-secret: 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
-        docker-image-name: docker.repo/test
-        docker-image-tag: 1.0.0
+        github-token: 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
+        image-name: docker.repo/test:1.0.0
+        
+        
