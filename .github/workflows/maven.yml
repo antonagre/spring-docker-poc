@@ -29,3 +29,4 @@ jobs:
       with:
         github-token: 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
         image-name: docker.repo/test:1.0.0
+        image-tag: 1.0.0
