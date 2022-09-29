@@ -28,5 +28,5 @@ jobs:
       uses: pmorelli92/github-container-registry-build-push@2.0.0
       with:
         github-push-secret: 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
-        docker-image-name: docker.repo/test:1.0.0
-
+        docker-image-name: docker.repo/test
+        docker-image-tag: 1.0.0
