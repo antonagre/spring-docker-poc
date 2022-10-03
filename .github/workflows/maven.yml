@@ -27,7 +27,7 @@ jobs:
     - name: Build with --build-arg(s)
       uses: VaultVulp/gp-docker-action@1.2.0
       with:
-        github-token: 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
+        github-token: ${secrets.GITHUBTOKEN}
         image-name: docker.repo/test:1.0.0
         
         
